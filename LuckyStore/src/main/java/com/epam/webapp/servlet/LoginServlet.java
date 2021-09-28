@@ -24,23 +24,6 @@ public class LoginServlet extends HttpServlet {
 
 	}
 
-	/*
-	 * protected void doPost(HttpServletRequest request, HttpServletResponse
-	 * response) throws ServletException, IOException {
-	 * response.setContentType("text/html; charset=UTF-8");
-	 * 
-	 * try (PrintWriter out = response.getWriter()) { String email =
-	 * request.getParameter("login-email"); String password =
-	 * request.getParameter("login-password");
-	 * 
-	 * UserDao udao = new UserDao(DBconnection.getConnection()); User user =
-	 * udao.userLogin(email, password); if (user != null) {
-	 * 
-	 * out.print("some user+++++");
-	 * 
-	 * } else { out.print(" no user-----"); } } }
-	 */
-
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String email = request.getParameter("login-email");
