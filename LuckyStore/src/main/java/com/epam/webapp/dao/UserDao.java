@@ -15,50 +15,6 @@ public class UserDao {
 		this.con = con;
 	}
 	
-/*
-	public User userLogin(String email, String password) {
-		User user = null;
-		try {
-			query = "select * from user where email=? and password=?";
-			pst = this.con.prepareStatement(query);
-			pst.setString(1, email);
-			pst.setString(2, password);
-			rs = pst.executeQuery();
-			if (rs.next()) {
-				user = new User();
-				user.setId(rs.getInt("iduser"));
-				user.setName(rs.getString("username"));
-				user.setEmail(rs.getString("email"));
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		return user;
-	}
-*/
-	/*
-	 * public User getUserDetails(String emailId, String password) {
-	 * 
-	 * User user = null;
-	 * 
-	 * Connection con = DBconnection.getConnection();
-	 * 
-	 * PreparedStatement ps = null; ResultSet rs = null;
-	 * 
-	 * try { ps =
-	 * con.prepareStatement("select * from user where email=? and password=?");
-	 * ps.setString(1, emailId); ps.setString(2, password); rs = ps.executeQuery();
-	 * 
-	 * if (rs.next()) { user = new User(); user.setName(rs.getString("name"));
-	 * user.setEmail(rs.getString("email"));
-	 * user.setSurname(rs.getString("surname"));
-	 * user.setPassword(rs.getString("password")); return user; }
-	 * 
-	 * } catch (SQLException e) { e.printStackTrace(); }
-	 * 
-	 * return user; }
-	 */
-	
 	public boolean saveUser(User user){
         boolean set = false;
         try{
