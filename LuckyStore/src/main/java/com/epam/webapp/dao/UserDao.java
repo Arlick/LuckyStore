@@ -7,7 +7,6 @@ import com.epam.webapp.entities.*;
 
 public class UserDao {
 	private Connection con;
-	// private String query;
 	private PreparedStatement pst;
 	private ResultSet rs;
 
